@@ -1,0 +1,888 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+:root{
+  --green: rgba(0, 0, 0.1);
+  --black: #130f40;
+  --light-color: #666;
+  --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0,.1); 
+  --border: .2rem solid rgba(0, 0, 0.1);
+  --outline: .1rem solid rgba(0, 0, 0, 0.1);
+
+}
+
+
+.btn{
+  border: .2rem solid var(--black);
+  margin-top: 1rem;
+  display: inline-block;
+  padding: .8rem 3rem;
+  font-size: 1.7rem;
+  border-radius: .5rem;
+  color: var(--black);
+  cursor: pointer;
+  background: none;
+}
+.btn:hover{
+  background: var(--green);
+  color:#fff ;
+}
+
+    body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  height: 50px;
+  position: sticky;
+  top: 0;
+  font-size: 20px;
+  background-image: url("https://th.bing.com/th/id/R.0b6f52f00b01775f0087d3b402b5eb22?rik=iTSwqL3Ls0SlgA&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f06%2fSeal-brown-solid-color-background.jpg&ehk=him%2fpkpo3I%2bxSGp1sxjIvZWO%2bsslUqJZDkVZpC%2fs%2bh4%3d&risl=&pid=ImgRaw&r=0");
+  border-radius: 9px;
+  font-style: italic;
+  text-decoration: none;
+  cursor: pointer;
+  
+} */
+
+
+
+.navbar li {
+  display: inline-block;
+  margin: 100px;
+
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #c0c69a !important;
+  transition: 0.5s ease all;
+} 
+ 
+
+
+
+
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+justify-content: space-between;
+padding: -1rem 9%;
+background: #fff;
+box-shadow:  var(--box-shadow);
+
+} 
+.header .logo{
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+.header .logo i {
+   color:var(--green);
+
+}
+.header .navbar a{
+  font-size: 1.7rem;
+  margin: 0 1rem;
+  color: var(--black);
+}
+.header .navbar a:hover{
+  color:var(--green)
+}
+.header .icons div{
+  border: 0 px solid;
+  height:5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  border-radius: .5rem;
+  background: #eee;
+  color: var(--black);
+  font-size: 2rem;
+  margin-right: .2rem;
+  text-align : center;
+  cursor: pointer;
+}
+.header .icons div:hover{
+background: var(--green);
+color: white ;
+}
+
+
+
+
+#menu-btn{
+  display:none;
+}
+
+.header .search-form{
+  position: absolute;
+  top:110%;
+  right: -110%;
+  max-width: 50rem ;
+  height: 4rem;
+  background:#fff;
+  border-radius: .5rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+} 
+
+.header .search-form.active{ 
+  right: 2rem;
+  transition: .4rem linear;
+}
+
+.header .search-form input{
+  height: 100%;
+  width: 100%;
+  background: none;
+  text-transform: none;
+  font-size: 1.6rem;
+  color:var(--black);
+  padding: 0 1.5rem;
+
+}
+.header .search-form label{
+  font-size: 2.2rem;
+  padding-right: 1.5rem;
+  color: var(--black);
+  cursor: pointer;
+
+}
+.header .search-form label:hover{
+color: var(--green);
+}  
+
+
+
+
+
+
+.homes {
+  width: 100%;
+  height: 100vh;
+  background-color: #00000066;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.home-head {
+  text-align: center;
+  /* position: relative; */
+  padding-top: 40px;
+
+}
+.home-head p{
+  margin-top: 40px;
+  font-size: 22px;
+  padding: 50px;
+  color: #fff;
+}
+
+ .home-head h1 {
+  font-size: 95px;
+  color: #fff;
+  text-align: center;
+  margin-top: 155px;
+  transition: 2s;
+  color: #fff;
+} 
+.home-head a {
+  font-size: 23px;
+  color: #fff;
+
+  border: 2px solid #fff;
+  padding: 15px 25px;
+  border-radius: 50px;
+  transition: 2s;
+  text-align: center;
+  margin: 40px;
+  
+}
+.home-head a:hover {
+  background-color:#fff;
+  color: black;
+}
+
+  
+.home-vid {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.homes .home-vid {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Set the object-fit property to "cover" */
+  opacity: 1; /* Adjust the opacity of the video to make it semi-transparent */
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .home-vid{
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .home-vid {
+    width: auto;
+    height: 100%;
+  }
+}
+
+
+
+
+
+/* 
+
+.add {
+  width: 13%;
+  height: 40%;
+  border-radius: 50%;
+  display: grid;
+  margin-top: -710px;
+  margin-left: 760px;
+  margin-bottom: 10px;
+  
+} */
+
+@keyframes rotate {
+  /* The rest of the animation keyframes are missing, so the @keyframes block should be removed if not used. */
+}
+
+ .star {
+  width: 180%;
+  height: 50%;
+  border-radius: 50%;
+  margin-top: 600px;
+  margin-right: -60px;
+  margin-left: 40px;
+  margin-bottom: 150px;
+} 
+.write {
+  display: flex;
+  align-items: center;
+  
+}
+
+.star img {
+  max-width: 100% !important;
+  margin-right: 10px;
+  height: 100%;
+}
+
+.write p {
+  font-size: 24px;
+  margin-top: 510px;
+  font-style: italic;
+}
+.write h1{
+  margin-left: 162px;
+  margin-top: 200px;
+}
+
+.video {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.content {
+  text-align: center;
+  /* position: relative; */
+  padding-top: 40px;
+
+}
+.content p{
+  margin-top: 40px;
+  font-size: 22px;
+  padding: 50px;
+}
+
+ .content h1 {
+  font-size: 95px;
+  color: #fff;
+  text-align: center;
+  margin-top: 155px;
+} 
+.content a {
+  font-size: 23px;
+  color: #fff;
+
+  border: 2px solid #fff;
+  padding: 15px 25px;
+  border-radius: 50px;
+  transition: 0.3s;
+  text-align: center;
+  margin: 40px;
+  
+}
+.content a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+  
+.background-clip {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.video .background-clip {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Set the object-fit property to "cover" */
+  opacity: 0.7; /* Adjust the opacity of the video to make it semi-transparent */
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .background-clip {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .background-clip {
+    width: auto;
+    height: 100%;
+  }
+}
+.review{
+text-align: center;
+font-size: 55px;
+font-style: italic;
+
+}
+
+.box {
+  box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+  height: 420px;
+  width: 320px;
+  margin-left: 40px;
+  background: white;
+  border-radius: 5px;
+  float: left;
+  padding: 20px; /* Adjust padding as needed */
+  margin-bottom: 30px;
+  font-style: italic;
+  display: flex;
+   flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.col-1 {
+  width: 49%;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 20px; /* Adjust margin-top as needed */
+}
+
+.box p {
+  font-style: italic;
+  padding: 5px;
+}
+
+.point {
+  background-color: rgb(227, 221, 211);
+  margin-top: 10px; /* Adjust margin-top as needed */
+}
+
+.box h5 {
+  margin-top: 10px; /* Adjust margin-top as needed */
+}
+
+
+/* 
+
+.menu {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+
+}  */
+
+h1 {
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+.menu{
+  
+  font-size: 20px;
+  margin-left: 20px;
+  margin-top: 70px;
+  margin-right: 20px;
+  width: 100%;
+  height: 100%;
+
+} 
+
+.heading{
+  text-align: center;
+  padding: 1rem 0;
+  padding-bottom: 0rem;
+  font-size: 3.5rem;
+  color: var(--black);
+}
+.heading span{
+ 
+  color: rgb(23, 21, 21);
+  padding:.3rem  2rem;
+  clip-path:polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50% ,0% 0%);
+}
+
+
+
+.md{
+  text-align: center;
+  font-size: 30px;
+  font-style: italic;
+  background-color: bisque;
+  width: 100%;
+  height: 960px;
+  font-family: Arial,sans-serif;
+  line-height: 1.6;
+  margin-top: 11px;
+}
+ .md,ul{
+list-style: none;
+padding: 0;
+/* position: relative; */
+ }
+ .md li{
+  text-align: center;
+  justify-content: space-between;
+  display: flex;
+  border-bottom:3px solid #ccc;
+}
+/* .product{
+  flex: 2;
+}
+.price{
+  font-weight: bold;
+} 
+.seprator{
+  flex: 12;
+  /* height: 1; 
+} */
+
+.group{
+  text-align: center;
+  font-size: 22px;
+position: relative;
+}
+.md-2{
+  text-align: center;
+}
+.md-3{
+  text-align: center;
+  font-size: 40px;
+}
+.group-1{
+  border:2px black solid;
+  height: 600px;
+  width: 715px;
+  margin-left: 70px;
+ 
+ 
+  
+}
+
+.head{
+  font-size: 40px;
+  font-style: italic;
+margin-left: 40px;
+margin-top: 5px;
+
+}
+ .text{
+  font-size: 19px;
+  height: 250px;
+  width: 305px;
+  padding-left: 20px;
+ }
+
+
+ .text-2{
+  font-size: 22px;
+  height: 250px;
+  width: 305px;
+  /* position: relative; */
+  margin-left: 470px;
+  margin-top: -346px;
+  padding-right: 40px;
+ }
+ .group-2{
+  border:2px black solid;
+  height: 420px;
+  width: 700px;
+  margin-left: 900px;
+  font-size: 21px;
+  text-align: center;
+  margin-top: -600px;
+}
+.head-2{
+  font-size: 0px;
+  font-style: italic;
+  margin-left: -115px;
+  /* position: relative; */
+}
+
+
+ .question{
+  text-align: center;
+  font-size: 22px;
+  margin-top: 200px;
+ overflow: hidden;
+  
+ }
+ .question_2{
+  text-align: center;
+  font-size: 40px;
+  background: #a79292;
+  width:40%;
+  height: 90px;
+  align-items: center;
+  margin-left: 30%;
+ }
+
+
+
+.accordion{
+  margin: 60px auto;
+  width: 100%;
+  max-width: 750px;
+
+}
+.accordion li{
+  list-style: none;
+  width: 100%;
+  padding: 5px;
+
+}
+.accordion li label{
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  font-weight: 500px;
+font-size: 18px;
+background: #ae7878;
+margin-bottom: 2px;
+cursor: pointer;
+
+}
+.accordion li label::after{
+  content: '+';
+  font-size: 34px;
+  position: absolute;
+  right: 485px;
+  transition: transform 0.5s;
+}
+ 
+input[type="radio"]{
+  display: none;
+}
+.accordion .question_3{
+  background: #e6e269;
+  text-align: left;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-hight 0.5s, padding 0.5s;
+  
+}
+.accordion input[type="radio"]:checked + label + .question_3{
+  max-height: 400px;
+  padding: 30px 20px;
+}
+.accordion input[type="radio"]:checked + label::after{
+  transform: rotate(135deg);
+}
+.question_4{
+  text-align: center;
+ font-size: 22px;  
+ width: 400px;
+ height: 300px;
+ margin-left: 39%;
+
+}
+
+.con{
+  color:#fefcfc ;
+  border: solid rgb(250, 248, 248)  7px;
+  box-shadow: 0 0 1em rgba(rgb(233, 228, 228),.5) inset ,
+  0 -0.5em 1em rgba(rgb(243, 241, 241),.2),
+  0 0.5em 1em rgba(rgb(255, 253, 253),.2),
+  0 0 0.5em rgba(rgb(250, 248, 248),.2);
+  background: #000;
+  
+  }
+  .con h2{
+    margin-left: 90px;
+  }
+  .con h1{
+    margin-left: 90px;
+  }
+  .con p{
+    margin-left: 90px;
+  }
+
+
+/* Basic styling for the form container */
+.detail {
+  max-width: 100%;
+  height: 200px;
+  margin: 0 auto;
+  padding: 20px;
+  /* border: 1px solid #ccc; */
+  border-radius: 5px;
+  margin-left: 150px;
+  
+  background: #fff;
+  color: #0d0707;
+  position: absolute;
+}
+
+/* Style for the form legend */
+.detail legend {
+  font-weight: bold;
+}
+
+/* Style for input fields and labels */
+.detail label {
+  display: block;
+  margin-top: 80px;
+  font-weight: bold;
+ 
+}
+
+.detail input[type="text"],
+.detail input[type="email"]
+/* .detail input[type="tel"] { */{
+  width: 100%;
+  padding: 8px;
+  margin-top: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+/* Style for radio buttons */
+.detail input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* Additional styling for grouping radio buttons */
+.detail fieldset {
+  border: none;
+}
+
+/* Styling for submit button */
+.detail input[type="submit"] {
+  display: block;
+  margin-top: 36px;
+  padding: 10px;
+  background-color: #0f0f10;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Hover effect for the submit button */
+.detail input[type="submit"]:hover {
+  background-color: #f3f7f7;
+  color: #0d0707;
+}
+.detail-2 {
+  max-width: 100%;
+  height: 200px;
+  margin: 0 auto;
+  padding: 20px;
+  /* border: 1px solid #ccc; */
+  border-radius: 5px;
+  margin-left: 490px;
+  
+  background: #fff;
+  color: #0d0707;
+  position: relative;
+  display: flex;
+  float: left;
+}
+.detail-2 label {
+  display: block;
+  margin-top: 80px;
+  font-weight: bold;
+  padding: 10px;
+}
+.detail-2 input[type="phone"],
+.detail-2 input[type="answer"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: -2px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+.detail-2 input[type="radio"] {
+  margin-right: 5px;
+}
+.detail-2 fieldset {
+  border: none;
+}
+.more{
+  float: left;
+  cursor: pointer;
+  
+}
+
+/* footer css*/
+.footer{
+  background: #fff;
+
+}
+.footer .boi-container{
+  border: 0px solid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem,1fr));
+  gap: 1.5rem;
+}
+
+.footer .boi-container .boi h3{
+  foot-size: .5rem;
+  color: var(--black);
+  padding: 1rem 0;
+}
+.footer .boi-container .boi h3 i{
+  color: var(--green);
+}
+.footer .boi-container .boi .links{
+  display: block;
+  font-size: 1.5rem;
+  color:var(--light-color);
+  padding: 1rem 0;
+
+}
+
+.footer .boi-container .boi .links i{
+  color: var(--green);
+  padding-right: .5rem;
+}
+.footer .boi-container .boi .links:hover i{
+  padding-right:2rem ;
+}
+
+.footer .boi-container .boi p{
+  line-height: 1.8;
+  font-size: 1.5rem;
+  color:var(--light-color);
+  padding: 1rem 0;
+}
+
+.footer .boi-container .boi .share a{
+  border: 0px solid;
+height: 4rem;
+width:4rem;
+line-height: 4rem;
+border-radius: .5rem;
+margin-left: .2rem;
+font-size: 2rem;
+color:var(--black);
+background: #eee;
+text-align:  center;
+}
+.footer .boi-container .boi .share a:hover{
+  background:var(--green);
+  color:#fff;
+}
+
+.footer .boi-container .boi .email{
+  width: 100%;
+  margin: .7rem 0;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  background: #eee;
+  font-size: 1.6rem;
+  color:var(--black);
+  text-transform: none;
+}
+.footer .boi-container .boi .payment-img{
+  margin-top: .2rem;
+  height: 16rem;
+  width:  20vw;
+}
+
+.footer .credit{
+  text-align: center;
+  margin-top: 2rem; 
+  padding: 1rem;
+  padding-top: 2.5rem;
+  font-size:2rem;
+  color:var(--black);
+  border-top: var(--border);
+}
+
+.footer .credit span {
+  color: var(--green);
+}
+
+
+
+
