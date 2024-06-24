@@ -4,3 +4,6 @@ The Grocery Management System is a simple and intuitive web application aimed at
 
 Restaurant Management System:-
 This project is a web-based application designed to help restaurant owners manage their operations efficiently. It includes features for managing menus, orders, reservations, and customer feedback.
+
+•Netflix is a website for displaying movies and adding them to a watch list.
+•The details of the movies based on the user’s preference can be fetched from the movie IMDB api using HTTP requests.
